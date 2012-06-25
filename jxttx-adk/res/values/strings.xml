@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kuwaga ControlerAdk</string>
+
+    <string name="str_log">Kuwagata Control</string>
+    <string name="dlg.text1">what did you said?</string>
+    <string name="dlg.text2">Please Speak something</string>
+    
+</resources>
