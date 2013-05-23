@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /Users/yokmama/git/github/andylib/AndyLib/src/jp/co/createsystem/IDTalkerSpeechService.aidl
+ * Original file: /Users/hijirinhijirin/git/github/andylib/AndyLib/src/jp/co/createsystem/IDTalkerSpeechService.aidl
  */
 package jp.co.createsystem;
 public interface IDTalkerSpeechService extends android.os.IInterface
@@ -23,13 +23,13 @@ public static jp.co.createsystem.IDTalkerSpeechService asInterface(android.os.IB
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof jp.co.createsystem.IDTalkerSpeechService))) {
 return ((jp.co.createsystem.IDTalkerSpeechService)iin);
 }
 return new jp.co.createsystem.IDTalkerSpeechService.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -649,7 +649,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -659,7 +659,7 @@ return DESCRIPTOR;
 }
 //speak control
 
-public int speak(java.lang.String textStr) throws android.os.RemoteException
+@Override public int speak(java.lang.String textStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -677,7 +677,7 @@ _data.recycle();
 }
 return _result;
 }
-public int speakAt(java.lang.String textStr, int offset) throws android.os.RemoteException
+@Override public int speakAt(java.lang.String textStr, int offset) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -696,7 +696,7 @@ _data.recycle();
 }
 return _result;
 }
-public int speakPhoneme(java.lang.String phonemeStr) throws android.os.RemoteException
+@Override public int speakPhoneme(java.lang.String phonemeStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -714,7 +714,7 @@ _data.recycle();
 }
 return _result;
 }
-public int sing(java.lang.String mmlStr) throws android.os.RemoteException
+@Override public int sing(java.lang.String mmlStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -732,7 +732,7 @@ _data.recycle();
 }
 return _result;
 }
-public int wavPlay(java.lang.String fileName) throws android.os.RemoteException
+@Override public int wavPlay(java.lang.String fileName) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -750,7 +750,7 @@ _data.recycle();
 }
 return _result;
 }
-public int speakSyosai(java.lang.String textStr) throws android.os.RemoteException
+@Override public int speakSyosai(java.lang.String textStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -768,7 +768,7 @@ _data.recycle();
 }
 return _result;
 }
-public int speakSyosaiForIME(java.lang.String textStr) throws android.os.RemoteException
+@Override public int speakSyosaiForIME(java.lang.String textStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -786,7 +786,7 @@ _data.recycle();
 }
 return _result;
 }
-public void stop() throws android.os.RemoteException
+@Override public void stop() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -800,7 +800,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void pause() throws android.os.RemoteException
+@Override public void pause() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -814,7 +814,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void resume() throws android.os.RemoteException
+@Override public void resume() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -828,7 +828,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void resumeNext() throws android.os.RemoteException
+@Override public void resumeNext() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -842,7 +842,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean busy() throws android.os.RemoteException
+@Override public boolean busy() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -859,7 +859,7 @@ _data.recycle();
 }
 return _result;
 }
-public boolean isPause() throws android.os.RemoteException
+@Override public boolean isPause() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -876,7 +876,7 @@ _data.recycle();
 }
 return _result;
 }
-public int getPositionTTS() throws android.os.RemoteException
+@Override public int getPositionTTS() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -893,7 +893,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setPositionTTS(int pos) throws android.os.RemoteException
+@Override public void setPositionTTS(int pos) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -908,7 +908,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public int getOffset() throws android.os.RemoteException
+@Override public int getOffset() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -925,7 +925,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setOffset(int pos) throws android.os.RemoteException
+@Override public void setOffset(int pos) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -943,7 +943,7 @@ _data.recycle();
 //property 
 //basic voice parameter
 
-public void setVoice(int v) throws android.os.RemoteException
+@Override public void setVoice(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -960,7 +960,7 @@ _data.recycle();
 }
 //0=Taro, 1=Hanako, 2= ----	(0)
 
-public int getVoice() throws android.os.RemoteException
+@Override public int getVoice() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -979,7 +979,7 @@ return _result;
 }
 //0=Taro, 1=Hanako, 2= ----	(0)
 
-public java.lang.String getVoiceName() throws android.os.RemoteException
+@Override public java.lang.String getVoiceName() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -998,7 +998,7 @@ return _result;
 }
 //
 
-public void setSpeed(int v) throws android.os.RemoteException
+@Override public void setSpeed(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1015,7 +1015,7 @@ _data.recycle();
 }
 //0-9				(6)
 
-public int getSpeed() throws android.os.RemoteException
+@Override public int getSpeed() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1034,7 +1034,7 @@ return _result;
 }
 //0-9				(6)
 
-public void setTone(int v) throws android.os.RemoteException
+@Override public void setTone(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1051,7 +1051,7 @@ _data.recycle();
 }
 //1-5				(3)
 
-public int getTone() throws android.os.RemoteException
+@Override public int getTone() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1070,7 +1070,7 @@ return _result;
 }
 //1-5				(3)
 
-public void setVolume(int v) throws android.os.RemoteException
+@Override public void setVolume(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1087,7 +1087,7 @@ _data.recycle();
 }
 //0-9				(7)
 
-public int getVolume() throws android.os.RemoteException
+@Override public int getVolume() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1106,7 +1106,7 @@ return _result;
 }
 //0-9				(7)
 
-public void setHightone(int v) throws android.os.RemoteException
+@Override public void setHightone(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1123,7 +1123,7 @@ _data.recycle();
 }
 //0,1				(0)
 
-public int getHightone() throws android.os.RemoteException
+@Override public int getHightone() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1142,7 +1142,7 @@ return _result;
 }
 //0,1				(0)
 
-public void setIntonation(int v) throws android.os.RemoteException
+@Override public void setIntonation(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1159,7 +1159,7 @@ _data.recycle();
 }
 //0-3				(2)
 
-public int getIntonation() throws android.os.RemoteException
+@Override public int getIntonation() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1179,7 +1179,7 @@ return _result;
 //0-3				(2)
 //optional parameter
 
-public void setEcho(int v) throws android.os.RemoteException
+@Override public void setEcho(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1196,7 +1196,7 @@ _data.recycle();
 }
 //0, 1				(0)
 
-public int getEcho() throws android.os.RemoteException
+@Override public int getEcho() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1215,7 +1215,7 @@ return _result;
 }
 //0, 1				(0)
 
-public void setFastFoward(int v) throws android.os.RemoteException
+@Override public void setFastFoward(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1232,7 +1232,7 @@ _data.recycle();
 }
 //0, 1				(0)
 
-public int getFastFoward() throws android.os.RemoteException
+@Override public int getFastFoward() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1251,7 +1251,7 @@ return _result;
 }
 //0, 1				(0)
 
-public void setWarpRate(float v) throws android.os.RemoteException
+@Override public void setWarpRate(float v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1268,7 +1268,7 @@ _data.recycle();
 }
 //0.6 - 1.0			(1.0)
 
-public float getWarpRate() throws android.os.RemoteException
+@Override public float getWarpRate() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1287,7 +1287,7 @@ return _result;
 }
 //0.6 - 1.0			(1.0)
 
-public void setTempoRate(float v) throws android.os.RemoteException
+@Override public void setTempoRate(float v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1304,7 +1304,7 @@ _data.recycle();
 }
 //0.5 - 1.5			(1.0)
 
-public float getTempoRate() throws android.os.RemoteException
+@Override public float getTempoRate() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1323,7 +1323,7 @@ return _result;
 }
 //0.5 - 1.5			(1.0)
 
-public boolean getKigouYomi() throws android.os.RemoteException
+@Override public boolean getKigouYomi() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1340,7 +1340,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setKigouYomi(boolean v) throws android.os.RemoteException
+@Override public void setKigouYomi(boolean v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1355,7 +1355,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean getKutouten() throws android.os.RemoteException
+@Override public boolean getKutouten() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1372,7 +1372,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setKutouten(boolean v) throws android.os.RemoteException
+@Override public void setKutouten(boolean v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1387,7 +1387,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean getNumAnalysis() throws android.os.RemoteException
+@Override public boolean getNumAnalysis() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1404,7 +1404,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setNumAnalysis(boolean v) throws android.os.RemoteException
+@Override public void setNumAnalysis(boolean v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1419,7 +1419,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public int getRomajiNumb() throws android.os.RemoteException
+@Override public int getRomajiNumb() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1436,7 +1436,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setRomajiNumb(int v) throws android.os.RemoteException
+@Override public void setRomajiNumb(int v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1451,7 +1451,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean getCrlfDelimitation() throws android.os.RemoteException
+@Override public boolean getCrlfDelimitation() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1468,7 +1468,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setCrlfDelimitation(boolean v) throws android.os.RemoteException
+@Override public void setCrlfDelimitation(boolean v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1483,7 +1483,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean getSpaceDelimitation() throws android.os.RemoteException
+@Override public boolean getSpaceDelimitation() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1500,7 +1500,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setSpaceDelimitation(boolean v) throws android.os.RemoteException
+@Override public void setSpaceDelimitation(boolean v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1515,7 +1515,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void setDefault() throws android.os.RemoteException
+@Override public void setDefault() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1531,7 +1531,7 @@ _data.recycle();
 }
 //Listener
 
-public void addListenner(jp.co.createsystem.IDTalkerSpeechServiceCallbackListener listener) throws android.os.RemoteException
+@Override public void addListenner(jp.co.createsystem.IDTalkerSpeechServiceCallbackListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1546,7 +1546,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void removeListener(jp.co.createsystem.IDTalkerSpeechServiceCallbackListener listener) throws android.os.RemoteException
+@Override public void removeListener(jp.co.createsystem.IDTalkerSpeechServiceCallbackListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1563,7 +1563,7 @@ _data.recycle();
 }
 //Clip board speech
 
-public void clipBoardSpeech(boolean v) throws android.os.RemoteException
+@Override public void clipBoardSpeech(boolean v) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1580,7 +1580,7 @@ _data.recycle();
 }
 // user dictionary
 
-public int addUsrDict(java.lang.String kanjStr, java.lang.String kanaStr, int hins, int katu) throws android.os.RemoteException
+@Override public int addUsrDict(java.lang.String kanjStr, java.lang.String kanaStr, int hins, int katu) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1601,7 +1601,7 @@ _data.recycle();
 }
 return _result;
 }
-public int deleteUsrDict(java.lang.String kanjStr, java.lang.String kanaStr) throws android.os.RemoteException
+@Override public int deleteUsrDict(java.lang.String kanjStr, java.lang.String kanaStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1620,7 +1620,7 @@ _data.recycle();
 }
 return _result;
 }
-public boolean getUsrDictContents(int index) throws android.os.RemoteException
+@Override public boolean getUsrDictContents(int index) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1638,7 +1638,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String getUsrDictContentsKanj() throws android.os.RemoteException
+@Override public java.lang.String getUsrDictContentsKanj() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1655,7 +1655,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String getUsrDictContentsKana() throws android.os.RemoteException
+@Override public java.lang.String getUsrDictContentsKana() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1672,7 +1672,7 @@ _data.recycle();
 }
 return _result;
 }
-public int getUsrDictContentsHins() throws android.os.RemoteException
+@Override public int getUsrDictContentsHins() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1689,7 +1689,7 @@ _data.recycle();
 }
 return _result;
 }
-public int getUsrDictContentsKatu() throws android.os.RemoteException
+@Override public int getUsrDictContentsKatu() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1706,7 +1706,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String checkUsrDictWordKanj(java.lang.String srcStr) throws android.os.RemoteException
+@Override public java.lang.String checkUsrDictWordKanj(java.lang.String srcStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1724,7 +1724,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String checkUsrDictWordKana(java.lang.String srcStr) throws android.os.RemoteException
+@Override public java.lang.String checkUsrDictWordKana(java.lang.String srcStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1742,7 +1742,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String accentChange(java.lang.String kanaStr) throws android.os.RemoteException
+@Override public java.lang.String accentChange(java.lang.String kanaStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1760,7 +1760,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String kanjiToKanaConvert(java.lang.String kanjStr) throws android.os.RemoteException
+@Override public java.lang.String kanjiToKanaConvert(java.lang.String kanjStr) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1778,7 +1778,7 @@ _data.recycle();
 }
 return _result;
 }
-public void flush() throws android.os.RemoteException
+@Override public void flush() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1792,7 +1792,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public int getVersion() throws android.os.RemoteException
+@Override public int getVersion() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -1809,7 +1809,7 @@ _data.recycle();
 }
 return _result;
 }
-public int getDTServiceStatus() throws android.os.RemoteException
+@Override public int getDTServiceStatus() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
